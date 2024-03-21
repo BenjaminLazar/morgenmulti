@@ -30,7 +30,7 @@ if uploaded_file is not None:
 
 # Function to send data to ChatGPT Vision
 def send_to_chatgpt_vision(text, image_base64):
-    api_key = "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"
+    api_key = st.secrets["OPENAI_API_KEY"]
     extra_prompt = "You help participents at a talk to generate questions with the help of an image of the talk. Todays talk is about large multimodal AI models. Its a talk that makes a simple explenation on what multimodality is and what these models are, and then focusses on what uses cases that exists in everyday buisness tasks. Generate questions for this talk based on what you know, the image, and some extra notes that comes here: "
     headers = {
         "Content-Type": "application/json",
